@@ -1,16 +1,12 @@
 .App {
   text-align: center;
-}
 
+
+}
 .App-logo {
+  animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -20,7 +16,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(7px + 1vmin);
   color: white;
 }
 
@@ -28,11 +24,85 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.box{
+  position: relative;
+  width: 1px;
+  height: 1px;
+  transition: all .5s;
+}
+.item{
+  position: absolute;
+  right: 0;
+  top: -1rem;
+  text-align: right;
+  line-height: 1rem;
+  opacity: .5;
+  transition: all .5s;
+}
+.item.active{
+  opacity: 1;
+  font-size:0.9rem;
+}
+.month{
+  width: 188px;
+  right: -61px;
+}
+
+
+.day{
+  width: 399px;
+  right: -185px;
+}
+
+.week{
+  width: 305px;
+  right: -121px;
+}
+
+.hour{
+  width: 597px;
+  right: -287px;
+}
+.Minute{
+  width: 508px;
+  right: -239px;
+}
+.second{
+  width: 700px;
+  right: -329px;
+}
+
+
+.msg{
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  text-align: left;
+  line-height: 2rem;
+  width: 300px;
+}
+.msg div{
+  opacity: .8;
+}
+.msg .year{
+  margin-bottom: 1rem;
+  opacity: 1;
+}
+
+.msg .year span{
+  font-size: 2rem;
+}
+
+.M_month{
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  font-size: 2rem;
 }
